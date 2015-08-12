@@ -33,10 +33,10 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
   .config(function(TabletopProvider){
     TabletopProvider.setTabletopOptions({
       key: 'https://docs.google.com/spreadsheets/d/1HkW89u4SJYZyEcaA0f50UoTqQn-hhPI14RgPox-Atn8/pubhtml',
       simpleSheet: true
     });
-  })
+  });
