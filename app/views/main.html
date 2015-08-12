@@ -1,49 +1,130 @@
-
-
+ 
+<div ng-controller="MainCtrl">
   <div class="row marketing">
       <div class="col-md-4">
-        <div>
-          <img src="http://placehold.it/200x100/dda037.png&text=..." alt="responsive image" class="img-responsive">
+        <div class="head-img">
+          <span class="glyphicon glyphicon-search"></span>
         </div>
         <div>
-          <h3>Some appropriate copy</h3>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div>
-          <img src="http://placehold.it/200x100/dda037.png&text=..." alt="responsive image" class="img-responsive">
-        </div>
-        <div>
-          <h3>Some appropriate copy</h3>
+          <h3>Search</h3>
         </div>
       </div>
       <div class="col-md-4">
-        <div>
-          <img src="http://placehold.it/200x100/dda037.png&text=..." alt="responsive image" class="img-responsive">
+        <div class="head-img">
+          <span class="glyphicon glyphicon-education"></span>
         </div>
         <div>
-          <h3>Some appropriate copy</h3>
+          <h3>Learn</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="head-img">
+           <span class="glyphicon glyphicon-pencil"></span>
+        </div>
+        <div>
+          <h3>Apply</h3>
         </div>
       </div>
   </div>
 
+<!--
+   <div class="alert alert-info">
+      <p>Sort Type: {{ sortType}} </p>
+      <p>Sort Reverse: {{ sortReverse}}</p>
+      <p>Search Query: {{ searchIncentives }} </p>
+   </div>
+-->
+
+  <form >
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+
+        <input type="text" class="form-control" placeholder="Search da monies" ng-model="searchIncentives">
+
+      </div>
+    </div>
+  </form>
+
+  <div>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox1" value="option1"> mebbe efficiency?
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox2" value="option2"> another thing
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox3" value="option3"> something else
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox1" value="option1"> How about this?
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox2" value="option2"> Appliances
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox3" value="option3"> Home Owners
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox1" value="option1"> Dear god, 
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox2" value="option2"> It keeps going
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox3" value="option3"> this. is. crazy.
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" id="inlineCheckbox3" value="option3"> this. is. sparta
+    </label>
+  </div>
 
 
-  <div class="row marketing" ng-controller="MainCtrl">
+  <div class="row marketing" >
       <table class="table" >
         <caption>table title and/or explanatory text</caption>
         <thead>
           <tr>
-            <th ng-repeat="col in tableTitles">{{col}}</th>
+
+             <th>
+                <a href="" ng-click="sortType = 'animals'; sortReverse = !sortReverse">
+                  Type
+                  <span ng-show="sortType == 'animals' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                  <span ng-show="sortType == 'animals' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                </a>
+             </th>
+             <th>Program</th>
+             <th>Category</th>
+             <th>Keyword</th>
+             <th>Fuel Source</th>
+             <th>Participating Utility</th>
+             <th>Amount</th>
+             <th>Contact</th>
+             <th>Phone/Email</th>
+
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="col in tableData">
-            <td >{{col.animals}}</td>
-            <td >{{col.number}}</td>
+          <tr ng-repeat="col in tableData | orderBy:sortType:sortReverse | filter:searchIncentives">
+           
+            <td >{{col.incentiveType}}</td>
+            <td >{{col.incentiveProgram}}</td>
+            <td>{{col.incentiveCategory}}</td>
+            <td>{{col.keyword}}</td>
+            <td>{{col.fuelSource}}</td>
+            <!--
+            <td>{{col.incentiveDetail}}</td>
+            <td>{{col.eligibility}}</td>
+            -->
+            <td>{{col.participatingUtility}}</td>
+            <td>{{col.amount}}</td>
+            <td><a href="{{col.contact}}">Apply</td>
+            <td>{{col.phoneEmail}}</td>
+            
           </tr >
 
         </tbody>
       </table>
     
   </div>
+</div>

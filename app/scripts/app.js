@@ -36,7 +36,8 @@ angular
   })
   .config(function(TabletopProvider){
     TabletopProvider.setTabletopOptions({
-      key: 'https://docs.google.com/spreadsheets/d/1HkW89u4SJYZyEcaA0f50UoTqQn-hhPI14RgPox-Atn8/pubhtml',
+      //key: 'https://docs.google.com/spreadsheets/d/1HkW89u4SJYZyEcaA0f50UoTqQn-hhPI14RgPox-Atn8/pubhtml',
+      key:'https://docs.google.com/spreadsheets/d/1lizvDw-cztrOAaYOPdemJEXik9oyO2t4IepGOjcDdzk/pubhtml',
       simpleSheet: true
     });
   });
