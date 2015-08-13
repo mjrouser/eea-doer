@@ -29,9 +29,9 @@
 
 <!--
    <div class="alert alert-info">
-      <p>Sort Type: {{ sortType}} </p>
-      <p>Sort Reverse: {{ sortReverse}}</p>
-      <p>Search Query: {{ searchIncentives }} </p>
+      <h4>Sort Type: {{ sortType}} </h4>
+      <h4>Sort Reverse: {{ sortReverse}}</h4>
+      <h4>Search Query: {{ searchIncentives }} </h4>
    </div>
 -->
 
@@ -40,44 +40,57 @@
       <div class="input-group">
         <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
 
-        <input type="text" class="form-control" placeholder="Search da monies" ng-model="searchIncentives">
+        <input type="text" class="form-control" placeholder="Search da monies" ng-model="searchIncentives.$">
 
       </div>
     </div>
   </form>
 
-  <div>
+
+<div>
+  <div class="form-group">
+   <h4>Incentive Type</h4>
     <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox1" value="option1"> mebbe efficiency?
+       <input type="checkbox" ng-true-value="'renewables'" ng-false-value="''" ng-model="searchIncentives.incentiveType">  Renewables
     </label>
     <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox2" value="option2"> another thing
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox3" value="option3"> something else
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox1" value="option1"> How about this?
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox2" value="option2"> Appliances
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox3" value="option3"> Home Owners
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox1" value="option1"> Dear god, 
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox2" value="option2"> It keeps going
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox3" value="option3"> this. is. crazy.
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" id="inlineCheckbox3" value="option3"> this. is. sparta
+       <input type="checkbox" ng-true-value="'efficiency'" ng-false-value="''" ng-model="searchIncentives.incentiveType"> Efficiency
     </label>
   </div>
+  <div class="form-group">
+    <h4>Incentive Program</h4>
+    <label class="checkbox-inline">
+       <input type="checkbox" ng-true-value="'residential'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram" > Residential
+    </label>
+    <label class="checkbox-inline" >
+       <input type="checkbox"  ng-true-value="'agriculture'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Agriculture
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox"  ng-true-value="'commercial'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Commercial
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox"  ng-true-value="'financing'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Financing and Services
+    </label>
+  </div> 
+  <div class="form-group">
+    <h4>Category</h4>
+    <label class="checkbox-inline">
+       <input type="checkbox"  ng-true-value="'appliances'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory"> Appliances 
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" ng-true-value="'construction'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory"> Construction
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox"  ng-true-value="'electricity'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory"> Electricity
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" ng-true-value="'retrofit'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory" > Retrofit
+    </label>
+    <label class="checkbox-inline">
+       <input type="checkbox" ng-true-value="'loans'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory" > Loans and Grants
+    </label>
+  </div>
+</div>
 
 
   <div class="row marketing" >
@@ -87,20 +100,60 @@
           <tr>
 
              <th>
-                <a href="" ng-click="sortType = 'animals'; sortReverse = !sortReverse">
+                <a href="" ng-click="sortType = 'incentiveType'; sortReverse = !sortReverse">
                   Type
-                  <span ng-show="sortType == 'animals' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                  <span ng-show="sortType == 'animals' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                  <span ng-show="sortType == 'incentiveType' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                  <span ng-show="sortType == 'incentiveType' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
                 </a>
              </th>
-             <th>Program</th>
-             <th>Category</th>
-             <th>Keyword</th>
-             <th>Fuel Source</th>
-             <th>Participating Utility</th>
-             <th>Amount</th>
-             <th>Contact</th>
-             <th>Phone/Email</th>
+             <th>
+                <a href="" ng-click="sortType = 'incentiveProgram'; sortReverse = !sortReverse">
+                   Program
+                <span ng-show="sortType == 'incentiveProgram' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'incentiveProgram' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
+             <th>
+                <a href="" ng-click="sortType = 'incentiveCategory'; sortReverse = !sortReverse">
+                   Category
+                <span ng-show="sortType == 'incentiveCategory' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'incentiveCategory' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
+             <th>
+                <a href="" ng-click="sortType = 'keyword'; sortReverse = !sortReverse">
+             Keyword
+                <span ng-show="sortType == 'keyword' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'keyword' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
+             <th>
+                <a href="" ng-click="sortType = 'incentiveCategory'; sortReverse = !sortReverse">
+             Fuel Source
+                <span ng-show="sortType == 'incentiveCategory' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'incentiveCategory' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
+             <th>
+                <a href="" ng-click="sortType = 'fuelSource'; sortReverse = !sortReverse">
+             Participating Utility
+                <span ng-show="sortType == 'fuelSource' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'fuelSource' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
+             <th>
+                <a href="" ng-click="sortType = 'participatingUtility'; sortReverse = !sortReverse">
+             Amount
+                <span ng-show="sortType == 'participatingUtility' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'participatingUtility' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
+             <th>
+                <a href="" ng-click="sortType = 'amount'; sortReverse = !sortReverse">
+             Contact
+                <span ng-show="sortType == 'amount' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'amount' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
+             <th>
+                <a href="" ng-click="sortType = 'phoneEmail'; sortReverse = !sortReverse">
+             Phone/Email
+                <span ng-show="sortType == 'phoneEmail' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'phoneEmail' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
 
           </tr>
         </thead>
