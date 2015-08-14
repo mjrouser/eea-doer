@@ -27,28 +27,21 @@
       </div>
   </div>
 
-<!--
-   <div class="alert alert-info">
-      <h4>Sort Type: {{ sortType}} </h4>
-      <h4>Sort Reverse: {{ sortReverse}}</h4>
-      <h4>Search Query: {{ searchIncentives }} </h4>
-   </div>
--->
-
   <form >
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
 
-        <input type="text" class="form-control" placeholder="Search da monies" ng-model="searchIncentives.$">
+        <input type="text" class="form-control" placeholder="Search Keywords" ng-model="searchIncentives.$">
 
       </div>
     </div>
   </form>
 
 
-<div>
-  <div class="form-group">
+<div class="row marketing">
+  <div class="form-group col-md-4">
+    <div class="check-group">
    <h4>Incentive Type</h4>
     <label class="checkbox-inline">
        <input type="checkbox" ng-true-value="'renewables'" ng-false-value="''" ng-model="searchIncentives.incentiveType">  Renewables
@@ -56,8 +49,10 @@
     <label class="checkbox-inline">
        <input type="checkbox" ng-true-value="'efficiency'" ng-false-value="''" ng-model="searchIncentives.incentiveType"> Efficiency
     </label>
+    </div>
   </div>
-  <div class="form-group">
+  <div class="form-group col-md-4">
+    <div class="check-group">
     <h4>Incentive Program</h4>
     <label class="checkbox-inline">
        <input type="checkbox" ng-true-value="'residential'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram" > Residential
@@ -71,8 +66,10 @@
     <label class="checkbox-inline">
        <input type="checkbox"  ng-true-value="'financing'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Financing and Services
     </label>
+    </div>
   </div> 
-  <div class="form-group">
+  <div class="form-group col-md-4">
+    <div class="check-group">
     <h4>Category</h4>
     <label class="checkbox-inline">
        <input type="checkbox"  ng-true-value="'appliances'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory"> Appliances 
@@ -89,6 +86,7 @@
     <label class="checkbox-inline">
        <input type="checkbox" ng-true-value="'loans'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory" > Loans and Grants
     </label>
+    </div>
   </div>
 </div>
 
@@ -160,19 +158,19 @@
         <tbody>
           <tr ng-repeat="col in tableData | orderBy:sortType:sortReverse | filter:searchIncentives">
            
-            <td >{{col.incentiveType}}</td>
-            <td >{{col.incentiveProgram}}</td>
-            <td>{{col.incentiveCategory}}</td>
-            <td>{{col.keyword}}</td>
-            <td>{{col.fuelSource}}</td>
+            <td ><div class="data-cell">{{col.incentiveType}}</div></td>
+            <td ><div class="data-cell">{{col.incentiveProgram}}</div></td>
+            <td><div class="data-cell">{{col.incentiveCategory}}</div></td>
+            <td><div class="data-cell">{{col.keyword}}</div></td>
+            <td><div class="data-cell">{{col.fuelSource}}</div></td>
             <!--
             <td>{{col.incentiveDetail}}</td>
             <td>{{col.eligibility}}</td>
             -->
-            <td>{{col.participatingUtility}}</td>
-            <td>{{col.amount}}</td>
-            <td><a href="{{col.contact}}">Apply</td>
-            <td>{{col.phoneEmail}}</td>
+            <td><div class="data-cell"><span class="text-back">{{col.participatingUtility}}</span></div></td>
+            <td><div class="data-cell">{{col.amount}}</div></td>
+            <td><div class="data-cell"><a href="{{col.contact}}">Apply</a></div></td>
+            <td><div class="data-cell">{{col.phoneEmail}}</div></td>
             
           </tr >
 

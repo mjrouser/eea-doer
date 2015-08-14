@@ -17,8 +17,25 @@ form{
     width: 50%;
     margin: 0 auto;
 }
-tr td{
-  height: 20px;
+.check-group{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.data-cell{
+  height: 50px;
+  overflow: hidden;
+  /*white-space: nowrap; */
+}
+.data-cell:hover{
+  overflow: visible;
+  height: auto;
+}
+.text-back{
+  background-color: transparent;
+}
+.text-back:hover{
+  background-color: #FFFFFF;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
