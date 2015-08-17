@@ -48,6 +48,9 @@ form{
 .text-back:hover{
   background-color: #FFFFFF;
 }
+.glosary-terms{
+  font-size: 1.25em;
+}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -111,7 +114,7 @@ form{
   margin: 40px 0;
 
 }
-.marketing h3{
+.heading-text{
   text-align: center;
 }
 .marketing p + h4 {
