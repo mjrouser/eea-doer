@@ -1,7 +1,7 @@
  
 <div ng-controller="MainCtrl">
   <div class="row marketing">
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4">
         <div class="head-img">
           <span class="glyphicon glyphicon-search"></span>
         </div>
@@ -9,7 +9,7 @@
           <h3>Search</h3>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4">
         <div class="head-img">
           <span class="glyphicon glyphicon-education"></span>
         </div>
@@ -17,7 +17,7 @@
           <h3>Learn</h3>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4">
         <div class="head-img">
            <span class="glyphicon glyphicon-pencil"></span>
         </div>
@@ -40,7 +40,7 @@
 
 
 <div class="row marketing">
-  <div class="form-group col-md-4">
+  <div class="form-group col-md-4 col-sm-4">
     <div class="check-group">
    <h4>Incentive Type</h4>
     <label class="checkbox-inline">
@@ -51,7 +51,7 @@
     </label>
     </div>
   </div>
-  <div class="form-group col-md-4">
+  <div class="form-group col-md-4 col-sm-4">
     <div class="check-group">
     <h4>Incentive Program</h4>
     <label class="checkbox-inline">
@@ -68,7 +68,7 @@
     </label>
     </div>
   </div> 
-  <div class="form-group col-md-4">
+  <div class="form-group col-md-4 col-sm-4">
     <div class="check-group">
     <h4>Category</h4>
     <label class="checkbox-inline">
@@ -92,6 +92,7 @@
 
 
   <div class="row marketing" >
+    <div class="table-responsive">
       <table class="table" >
         <caption>table title and/or explanatory text</caption>
         <thead>
@@ -123,28 +124,28 @@
                 <span ng-show="sortType == 'keyword' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
              <th>
-                <a href="" ng-click="sortType = 'incentiveCategory'; sortReverse = !sortReverse">
-             Fuel Source
-                <span ng-show="sortType == 'incentiveCategory' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'incentiveCategory' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
-             </th>
-             <th>
                 <a href="" ng-click="sortType = 'fuelSource'; sortReverse = !sortReverse">
-             Participating Utility
+             Fuel Source
                 <span ng-show="sortType == 'fuelSource' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
                 <span ng-show="sortType == 'fuelSource' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
              <th>
                 <a href="" ng-click="sortType = 'participatingUtility'; sortReverse = !sortReverse">
-             Amount
+             Participating Utility
                 <span ng-show="sortType == 'participatingUtility' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
                 <span ng-show="sortType == 'participatingUtility' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
              <th>
                 <a href="" ng-click="sortType = 'amount'; sortReverse = !sortReverse">
-             Contact
+             Amount
                 <span ng-show="sortType == 'amount' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
                 <span ng-show="sortType == 'amount' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th>
+             <th>
+                <a href="" ng-click="sortType = 'apply'; sortReverse = !sortReverse">
+             Contact
+                <span ng-show="sortType == 'apply' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'apply' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
              <th>
                 <a href="" ng-click="sortType = 'phoneEmail'; sortReverse = !sortReverse">
@@ -176,6 +177,6 @@
 
         </tbody>
       </table>
-    
+    </div>
   </div>
 </div>
