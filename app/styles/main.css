@@ -13,6 +13,9 @@ html{
   height: 75px;
   width: 150px;
   margin-top: 5px;
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
+  -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
 }
 .menu-right{
     margin-top: .5em;
@@ -27,6 +30,7 @@ body {
 form{
     width: 50%;
     margin: 0 auto;
+    padding-top: 20px;
 }
 .check-group{
   text-align: center;
@@ -102,6 +106,9 @@ form{
   height: 200px;
   width: 200px;
   margin: 0 auto;
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
+  -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
 }
 .head-img>.glyphicon{
   font-size: 6em;
