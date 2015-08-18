@@ -103,22 +103,22 @@ form{
 
 .head-img{
   background-color: #004B8E;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   margin: 0 auto;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
 }
 .head-img>.glyphicon{
-  font-size: 6em;
-  padding: 60px 0px 0px 60px;
+  font-size: 4.5em;
+  padding: 45px 0px 0px 45px;
   color: #FFF;
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+  margin: 20px 0;
 
 }
 .heading-text{
@@ -128,3 +128,8 @@ form{
   margin-top: 28px;
 }
 
+.arrow{
+  float: right;
+  margin-right: -25px;
+  font-size: 2.25em;
+}
