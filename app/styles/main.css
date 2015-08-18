@@ -17,6 +17,11 @@ html{
   height: 75px;
   width: 150px;
   margin-top: 5px;
+
+}
+.logo,
+.head-img{
+  border-radius: 4px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
@@ -109,9 +114,6 @@ form{
   height: 150px;
   width: 150px;
   margin: 0 auto;
-  -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
-  -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
-  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
 }
 .head-img>.glyphicon{
   font-size: 4.5em;
