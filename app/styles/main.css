@@ -45,10 +45,17 @@ form{
   margin: 0 auto;
 }
 
+.hidden-col{
+  display: none;
+}
+
 .data-cell{
   height: 50px;
   overflow: hidden;
   /*white-space: nowrap; */
+}
+.prog-name-cell{
+  width:500px;
 }
 .data-cell:hover{
   overflow: visible;

@@ -19,7 +19,7 @@
         <div class="arrow"><span class="glyphicon glyphicon-arrow-right"></span></div>
         <div class="heading-text">
           <h3>2. Learn</h3>
-          <p>Discover money-saving rebates and incentives for your home or business, and learn what you need to qualify for them.</p>
+          <p>Discover money-saving rebates and incentives for your home or business, and learn what you need to qualify for them. We have provided a glosary for fuel-source terms as well.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-4">
@@ -110,7 +110,7 @@
         <caption>Available Incentives and Rebates:</caption>
         <thead>
           <tr>
-
+<!--
              <th>
                 <a href="" ng-click="sortType = 'incentiveType'; sortReverse = !sortReverse">
                   Type
@@ -118,12 +118,20 @@
                   <span ng-show="sortType == 'incentiveType' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
                 </a>
              </th>
+            
              <th>
                 <a href="" ng-click="sortType = 'incentiveProgram'; sortReverse = !sortReverse">
                    Program
                 <span ng-show="sortType == 'incentiveProgram' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
                 <span ng-show="sortType == 'incentiveProgram' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
+-->
+             <th>
+                <a href="" ng-click="sortType = 'programName'; sortReverse = !sortReverse">
+                   Name
+                <span ng-show="sortType == 'programName' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                <span ng-show="sortType == 'programName' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+             </th> 
              <th>
                 <a href="" ng-click="sortType = 'incentiveCategory'; sortReverse = !sortReverse">
                    Category
@@ -136,12 +144,14 @@
                 <span ng-show="sortType == 'keyword' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
                 <span ng-show="sortType == 'keyword' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
+<!--
              <th>
                 <a href="" ng-click="sortType = 'fuelSource'; sortReverse = !sortReverse">
              Fuel Source
                 <span ng-show="sortType == 'fuelSource' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
                 <span ng-show="sortType == 'fuelSource' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
+-->
              <th>
                 <a href="" ng-click="sortType = 'participatingUtility'; sortReverse = !sortReverse">
              Participating Utility
@@ -154,38 +164,34 @@
                 <span ng-show="sortType == 'amount' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
                 <span ng-show="sortType == 'amount' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
+<!--
              <th>
                 <a href="" ng-click="sortType = 'apply'; sortReverse = !sortReverse">
              Contact
                 <span ng-show="sortType == 'apply' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
                 <span ng-show="sortType == 'apply' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
              </th>
-             <th>
-                <a href="" ng-click="sortType = 'phoneEmail'; sortReverse = !sortReverse">
-             Phone/Email
-                <span ng-show="sortType == 'phoneEmail' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'phoneEmail' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
-             </th>
+-->
+
 
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="col in tableData | orderBy:sortType:sortReverse | filter:searchIncentives">
            
-            <td ><div class="data-cell">{{col.incentiveType}}</div></td>
-            <td ><div class="data-cell">{{col.incentiveProgram}}</div></td>
+           <!-- Hidden, but still sortable data -->
+            <td class="hidden-col"><div class="data-cell">{{col.incentiveType}}</div></td>
+            <td class="hidden-col"><div class="data-cell">{{col.incentiveProgram}}</div></td>
+            <td class="hidden-col"><div class="data-cell">{{col.fuelSource}}</div></td>
+            <td class="hidden-col">{{col.incentiveDetail}}</td>
+            <td class="hidden-col">{{col.eligibility}}</td>
+
+          <!-- Visible and sortable data -->
+            <td><div class="data-cell prog-name-cell"><a href="{{col.contact}}" title="" alt="program link">{{col.programName}}</a></div></td>
             <td><div class="data-cell">{{col.incentiveCategory}}</div></td>
             <td><div class="data-cell">{{col.keyword}}</div></td>
-            <td><div class="data-cell">{{col.fuelSource}}</div></td>
-            <!--
-            <td>{{col.incentiveDetail}}</td>
-            <td>{{col.eligibility}}</td>
-            -->
             <td><div class="data-cell"><span class="text-back">{{col.participatingUtility}}</span></div></td>
             <td><div class="data-cell">{{col.amount}}</div></td>
-            <td><div class="data-cell"><a href="{{col.contact}}">Apply</a></div></td>
-            <td><div class="data-cell">{{col.phoneEmail}}</div></td>
-            
           </tr >
 
         </tbody>

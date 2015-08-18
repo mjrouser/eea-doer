@@ -11,9 +11,10 @@ angular.module('eeaDoerApp')
   .controller('MainCtrl', function ($scope, Tabletop) {
 
 
-     $scope.sortType     = 'incentiveType'; // set the default sort type
+     $scope.sortType     = 'programName'; // set the default sort type
      $scope.sortReverse  = false;  // set the default sort order
      $scope.searchIncentives   = '';     // set the default search/filter term
+     $scope.searchSecond = [];
 
 
      Tabletop.then(function(ttdata){
