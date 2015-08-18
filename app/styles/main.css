@@ -9,6 +9,10 @@ html{
   font-family: 'Open Sans', sans-serif;
 }
 
+.mini-head{
+  width: 150px;
+  margin-left: auto;
+}
 .logo{
   height: 75px;
   width: 150px;
@@ -28,7 +32,6 @@ body {
 }
 
 form{
-    width: 50%;
     margin: 0 auto;
     padding-top: 20px;
 }
@@ -145,5 +148,10 @@ form{
   .footer p{
     margin: 0px;
     padding: 0px 5px 0px 5px;
+  }
+}
+@media (min-width: 769px){
+  form{
+    width: 50%;
   }
 }
