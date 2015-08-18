@@ -56,12 +56,13 @@
     <div class="check-group">
    <h4>Incentive Type</h4>
     <label class="checkbox-inline">
-       <input type="checkbox" ng-true-value="'renewables'" ng-false-value="''" ng-model="searchIncentives.incentiveType">  Renewables
+       <input type="checkbox"  ng-model="types.renewables" />  Renewables
     </label>
     <label class="checkbox-inline">
-       <input type="checkbox" ng-true-value="'efficiency'" ng-false-value="''" ng-model="searchIncentives.incentiveType"> Efficiency
+       <input type="checkbox"  ng-model="types.efficiency" /> Efficiency
     </label>
     </div>
+    <pre>{{types|json}}</pre>
   </div>
   <div class="form-group col-md-4 col-sm-4">
     <div class="check-group">
@@ -99,6 +100,7 @@
        <input type="checkbox" ng-true-value="'loans'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory" > Loans and Grants
     </label>
     </div>
+    <pre>{{categories|json}}</pre>
   </div>
   </div>
 </div>
@@ -177,7 +179,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="col in tableData | orderBy:sortType:sortReverse | filter:searchIncentives">
+          <tr ng-repeat="col in tableData | orderBy:sortType:sortReverse | typeFilter:types">
            
            <!-- Hidden, but still sortable data -->
             <td class="hidden-col"><div class="data-cell">{{col.incentiveType}}</div></td>

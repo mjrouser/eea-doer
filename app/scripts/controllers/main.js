@@ -14,7 +14,9 @@ angular.module('eeaDoerApp')
      $scope.sortType     = 'programName'; // set the default sort type
      $scope.sortReverse  = false;  // set the default sort order
      $scope.searchIncentives   = '';     // set the default search/filter term
-     $scope.searchSecond = [];
+     $scope.types = {efficiency: false, renewables: false};
+     $scope.categories = {appliances: false, construction: false, electricity: false, retrofit: false, loans: false};
+     $scope.search = [];
 
 
      Tabletop.then(function(ttdata){
