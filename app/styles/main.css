@@ -17,7 +17,7 @@ html{
   -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.27);
 }
-.menu-right{
+.menu{
     margin-top: .5em;
     width: 150px;
     text-align: center;
@@ -132,4 +132,18 @@ form{
   float: right;
   margin-right: -25px;
   font-size: 2.25em;
+}
+
+@media (max-width: 768px){
+  .heading-group{
+    display: none;
+  }
+  .mini-head{
+    margin: 0 auto;
+    width: 150px;
+  }
+  .footer p{
+    margin: 0px;
+    padding: 0px 5px 0px 5px;
+  }
 }
