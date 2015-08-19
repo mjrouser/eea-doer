@@ -12,19 +12,20 @@ angular.module('eeaDoerApp')
   .filter('categoryFilter', function () {
     return function (items, categories) {
 
-      var filtered = [];
+      var categoried = [];
 
       angular.forEach(items, function(item){
     	  if (categories.appliances === false && categories.construction === false) {
-    		filtered.push(item);
+    		categoried.push(item);
     	  }else if(categories.appliances === true && categories.construction === false && item.category === 'appliances'){
-    		filtered.push(item);
+    		categoried.push(item);
          }else if(categories.construction === true && categories.appliances === false && item.category === 'construction'){
-    		filtered.push(item);
+    		categoried.push(item);
     	  }
 
       });
 
 
-      return filtered;
+      return categoried;
+     };
   });

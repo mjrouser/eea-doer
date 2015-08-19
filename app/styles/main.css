@@ -30,6 +30,7 @@ html{
     margin-top: .5em;
     width: 150px;
     text-align: center;
+    font-size: 1.33em;
 }
 
 body {
@@ -43,6 +44,15 @@ form{
 .check-group{
   text-align: center;
   margin: 0 auto;
+}
+.button-div{
+  width: 103px;
+  height: 34px;
+  margin: 0 auto;
+}
+.clear-button{
+  background-color: #004B8E;
+  color: #FFFFFF;
 }
 
 .hidden-col{
@@ -82,7 +92,6 @@ form{
 /* Custom page header */
 .header {
 
-  margin-bottom: 10px;
 }
 .color-band{
   height: 20px;

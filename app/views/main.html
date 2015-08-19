@@ -31,155 +31,130 @@
           <p>Click the title of the incentive to visit the program's site.</p>
         </div>
       </div>
-  </div>
+  </div><!--/.row, .heading-group-->
 
 
 
-<div class="row marketing panel panel-default">
- <div class="panel-body">
-  <form >
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+  <div class="row marketing panel panel-default">
+    <div class="panel-body">
+      <form >
+         <div class="form-group">
+           <div class="input-group">
+             <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
 
-        <input type="text" class="form-control" placeholder="Search Keywords" ng-model="searchIncentives.$">
+               <input type="text" class="form-control" placeholder="Search Keywords" ng-model="searchIncentives.$">
+
+           </div>
+         </div>
+      </form>
+      <div class="form-group col-md-4 col-sm-4" >
+        <div class="check-group">
+          <h4>Incentive Type</h4>
+           <label class="checkbox-inline">
+             <input type="checkbox" ng-true-value="'renewables'" data-ng-false-value='' ng-model="searchIncentives.incentiveType">  Renewables
+           </label>
+           <label class="checkbox-inline">
+             <input type="checkbox" ng-true-value="'efficiency'" data-ng-false-value='' ng-model="searchIncentives.incentiveType"> 
+             Efficiency
+           </label>
+        </div>
 
       </div>
-    </div>
-  </form>
+      <div class="form-group col-md-4 col-sm-4">
+         <div class="check-group">
+           <h4>Incentive Program</h4>
+            <label class="checkbox-inline">
+              <input type="checkbox" ng-true-value="'residential'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram" > Residential
+            </label>
+            <label class="checkbox-inline" >
+              <input type="checkbox"  ng-true-value="'agriculture'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Agriculture
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox"  ng-true-value="'commercial'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Commercial
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox"  ng-true-value="'financing'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Financing and Services
+            </label>
+         </div>
+      </div> 
+      <div class="form-group col-md-4 col-sm-4">
+         <div class="check-group">
+           <h4>Category</h4>
 
+             <label class="checkbox-inline">
+               <input type="checkbox"  ng-true-value="'appliances'" data-ng-false-value='' ng-model="searchIncentives.incentiveCategory" /> Appliances 
+             </label>
+             <label class="checkbox-inline">
+               <input type="checkbox" ng-true-value="'construction'" data-ng-false-value='' ng-model="searchIncentives.incentiveCategory" /> Construction
+             </label>
+             <label class="checkbox-inline">
+               <input type="checkbox"  ng-true-value="'electricity'" data-ng-false-value='' ng-model="searchIncentives.incentiveCategory" /> Electricity
+             </label>
+             <label class="checkbox-inline">
+               <input type="checkbox" ng-true-value="'retrofit'" data-ng-false-value='' ng-model="searchIncentives.incentiveCategory" /> Retrofit
+             </label>
+             <label class="checkbox-inline">
+               <input type="checkbox" ng-true-value="'loans'" data-ng-false-value='' ng-model="searchIncentives.incentiveCategory" /> Loans and Grants
+             </label>
+         </div>
 
-
-
-
-  <div class="form-group col-md-4 col-sm-4">
-    <div class="check-group">
-   <h4>Incentive Type</h4>
-    <label class="checkbox-inline">
-       <input type="checkbox"  ng-model="types.renewables" />  Renewables
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox"  ng-model="types.efficiency" /> Efficiency
-    </label>
-    </div>
-    <pre>{{types|json}}</pre>
-  </div>
-  <div class="form-group col-md-4 col-sm-4">
-    <div class="check-group">
-    <h4>Incentive Program</h4>
-    <label class="checkbox-inline">
-       <input type="checkbox" ng-true-value="'residential'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram" > Residential
-    </label>
-    <label class="checkbox-inline" >
-       <input type="checkbox"  ng-true-value="'agriculture'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Agriculture
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox"  ng-true-value="'commercial'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Commercial
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox"  ng-true-value="'financing'" ng-false-value="''" ng-model="searchIncentives.incentiveProgram"> Financing and Services
-    </label>
-    </div>
-  </div> 
-  <div class="form-group col-md-4 col-sm-4">
-    <div class="check-group">
-    <h4>Category</h4>
-    <label class="checkbox-inline">
-       <input type="checkbox"  ng-true-value="'appliances'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory"> Appliances 
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" ng-true-value="'construction'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory"> Construction
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox"  ng-true-value="'electricity'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory"> Electricity
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" ng-true-value="'retrofit'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory" > Retrofit
-    </label>
-    <label class="checkbox-inline">
-       <input type="checkbox" ng-true-value="'loans'" ng-false-value="''" ng-model="searchIncentives.incentiveCategory" > Loans and Grants
-    </label>
-    </div>
-    <pre>{{categories|json}}</pre>
-  </div>
-  </div>
-</div>
+      </div>
+      <!--
+      <a class="btn clear-button" href="" title="" ng-click="clearFilters">Clear Filters</a>
+      
+      <div class="button-div">
+        
+      </div>
+      -->
+    </div><!-- / .panel-body -->
+  </div><!-- /.row .panel -->
 
 
   <div class="row marketing" >
     <div class="table-responsive">
       <table class="table" >
         <caption>Available Incentives and Rebates:</caption>
-        <thead>
+         <thead>
           <tr>
-<!--
-             <th>
-                <a href="" ng-click="sortType = 'incentiveType'; sortReverse = !sortReverse">
-                  Type
-                  <span ng-show="sortType == 'incentiveType' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                  <span ng-show="sortType == 'incentiveType' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
-                </a>
-             </th>
-            
-             <th>
-                <a href="" ng-click="sortType = 'incentiveProgram'; sortReverse = !sortReverse">
-                   Program
-                <span ng-show="sortType == 'incentiveProgram' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'incentiveProgram' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
-             </th>
--->
              <th>
                 <a href="" ng-click="sortType = 'programName'; sortReverse = !sortReverse">
                    Name
-                <span ng-show="sortType == 'programName' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'programName' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                   <span ng-show="sortType == 'programName' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                   <span ng-show="sortType == 'programName' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                </a>
              </th> 
              <th>
                 <a href="" ng-click="sortType = 'incentiveCategory'; sortReverse = !sortReverse">
                    Category
-                <span ng-show="sortType == 'incentiveCategory' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'incentiveCategory' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                   <span ng-show="sortType == 'incentiveCategory' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                   <span ng-show="sortType == 'incentiveCategory' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                </a>
              </th>
              <th>
                 <a href="" ng-click="sortType = 'keyword'; sortReverse = !sortReverse">
-             Keyword
-                <span ng-show="sortType == 'keyword' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'keyword' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                   Keyword
+                   <span ng-show="sortType == 'keyword' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                   <span ng-show="sortType == 'keyword' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                </a>
              </th>
-<!--
-             <th>
-                <a href="" ng-click="sortType = 'fuelSource'; sortReverse = !sortReverse">
-             Fuel Source
-                <span ng-show="sortType == 'fuelSource' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'fuelSource' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
-             </th>
--->
              <th>
                 <a href="" ng-click="sortType = 'participatingUtility'; sortReverse = !sortReverse">
-             Participating Utility
-                <span ng-show="sortType == 'participatingUtility' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'participatingUtility' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                   Participating Utility
+                   <span ng-show="sortType == 'participatingUtility' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                   <span ng-show="sortType == 'participatingUtility' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                </a>
              </th>
              <th>
                 <a href="" ng-click="sortType = 'amount'; sortReverse = !sortReverse">
-             Amount
-                <span ng-show="sortType == 'amount' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'amount' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                  Amount
+                  <span ng-show="sortType == 'amount' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+                  <span ng-show="sortType == 'amount' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+                </a>
              </th>
-<!--
-             <th>
-                <a href="" ng-click="sortType = 'apply'; sortReverse = !sortReverse">
-             Contact
-                <span ng-show="sortType == 'apply' && !sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
-                <span ng-show="sortType == 'apply' && sortReverse" class="glyphicon glyphicon-triangle-top"></span>
-             </th>
--->
-
-
           </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="col in tableData | orderBy:sortType:sortReverse | typeFilter:types">
+         </thead>
+         <tbody>
+          <tr ng-repeat="col in tableData | orderBy:sortType:sortReverse | filter:searchIncentives">
            
            <!-- Hidden, but still sortable data -->
             <td class="hidden-col"><div class="data-cell">{{col.incentiveType}}</div></td>
@@ -196,8 +171,10 @@
             <td><div class="data-cell">{{col.amount}}</div></td>
           </tr >
 
-        </tbody>
+         </tbody>
       </table>
-    </div>
-  </div>
+    </div><!-- / .table-responsive -->
+  </div><!-- /.row -->
 </div>
+
+<!--   -->

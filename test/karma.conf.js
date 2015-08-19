@@ -35,6 +35,7 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/tabletop/src/tabletop.js',
       'bower_components/angular-tabletop/TabletopProvider.js',
+      'bower_components/angular-filter/dist/angular-filter.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

@@ -18,7 +18,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'times.tabletop'
+    'times.tabletop',
+    'angular.filter'
   ])
   .config(function ($routeProvider) {
     $routeProvider
