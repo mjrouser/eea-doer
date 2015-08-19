@@ -15,9 +15,8 @@ angular.module('eeaDoerApp')
      $scope.sortReverse  = false;  // set the default sort order
      $scope.searchIncentives   = '';     // set the default search/filter term
 
-     $scope.clearFilters = function($scope){
-         $scope.searchIncentives = '';
-         console.log('shots fired');
+     $scope.clearFilters = function(){
+         $scope.searchIncentives = '';       
      };
 
 

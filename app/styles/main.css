@@ -49,10 +49,16 @@ form{
   width: 103px;
   height: 34px;
   margin: 0 auto;
+  clear: both;
 }
 .clear-button{
   background-color: #004B8E;
   color: #FFFFFF;
+}
+.clear-button:hover, .clear-button:focus{
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color:#003c71 ;
 }
 
 .hidden-col{
