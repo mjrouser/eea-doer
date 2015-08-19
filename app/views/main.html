@@ -1,5 +1,23 @@
 
 <div ng-controller="MainCtrl">
+  <div class="jumbotron">
+
+            <div class="mini-head">
+              <a href="http://www.mass.gov/eea/grants-and-tech-assistance/guidance-technical-assistance/agencies-and-divisions/doer/" target="_blank"><img class="img-responsive logo" src="images/DOER_JPEG_300dpi.jpg" alt="DOER logo"></a>
+           
+              <div class="menu">
+                <a class="menu-link" href="#/">Home</a><span>&nbsp;|</span>
+                <a class="menu-link" ng-href="#/glossary">Glossary</a>
+              </div>
+            </div>
+            
+            <!--
+             <div class="head-text">
+                  <p>Massachusetts Department of Energy Resources is please to present our prototype release of our “All-in-One” Energy Incentives/Rebates information page.<br>
+                  This foundational page provides our constituents the ability to search, learn, and apply for Municipal, State and Federal Energy Incentives and Rebates.”
+                 </p>
+             </div>
+             -->
   <div class="row marketing heading-group">
       <div class="col-md-4 col-sm-4">
         <div class="head-img">
@@ -9,7 +27,7 @@
         <div class="arrow"><span class="glyphicon glyphicon-arrow-right"></span></div>
         <div class="heading-text">
           <h3>1. Search</h3>
-          <p>Search for and find incentives via keywords or the provided filters.</p>
+          <p>Search for and find incentives via keywords or the provided filters below.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-4">
@@ -19,7 +37,7 @@
         <div class="arrow"><span class="glyphicon glyphicon-arrow-right"></span></div>
         <div class="heading-text">
           <h3>2. Learn</h3>
-          <p>Discover money-saving rebates and incentives for your home or business, and learn what you need to qualify for them. We have provided a glosary for fuel-source terms as well.</p>
+          <p>Discover money-saving rebates and incentives for your home or business, and learn what you need to qualify for them. We have provided a <a href="#/glossary">glossary</a> for fuel-source terms as well.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-4">
@@ -28,15 +46,17 @@
         </div>
         <div class="heading-text">
           <h3>3. Apply</h3>
-          <p>Click the title of the incentive to visit the program's site.</p>
+          <p>Click the title of the incentive to visit the program's site. There you can find further details about specific programs and instructions on how to apply.</p>
         </div>
       </div>
   </div><!--/.row, .heading-group-->
+  </div>
 
 
 
   <div class="row marketing panel panel-default">
     <div class="panel-body">
+      <p>Filters</p>
       <form >
          <div class="form-group">
            <div class="input-group">

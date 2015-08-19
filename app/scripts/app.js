@@ -27,8 +27,8 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/glosary', {
-        templateUrl: 'views/glosary.html',
+      .when('/glossary', {
+        templateUrl: 'views/glossary.html',
         controller: 'GlosCtrl'
       })
       .otherwise({
