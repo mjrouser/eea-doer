@@ -206,6 +206,10 @@ caption{
     margin: 0px;
     padding: 0px 5px 0px 5px;
   }
+  .table-container{
+    max-height: auto;
+    
+  }
 }
 @media (min-width: 769px){
   form{
