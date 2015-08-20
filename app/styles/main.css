@@ -50,7 +50,7 @@ body {
   margin-bottom: 0px;
 }
 .heading-text{
-  
+
 }
 .panel-body>p{
    text-align: center;
@@ -83,6 +83,10 @@ form{
   color: #FFFFFF;
   background-color:#003c71 ;
 }
+.table-container{
+    max-height: 750px;
+    overflow-y: auto;
+}
 caption{
     color: #000;
     text-align: center;
@@ -104,12 +108,14 @@ caption{
   overflow: visible;
   height: auto;
 }
+/*
 .text-back{
   background-color: transparent;
 }
 .text-back:hover{
   background-color: #FFFFFF;
 }
+*/
 .glosary-terms{
   font-size: 1.25em;
 }

@@ -24,7 +24,7 @@ angular.module('eeaDoerApp')
             
           var data = ttdata[0];
           $scope.tableData = data;
-          console.log(data);
+         // console.log(data);
 
       }); //End Tabletop
 
