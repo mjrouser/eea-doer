@@ -8,6 +8,7 @@
  * Controller of the eeaDoerApp
  */
 angular.module('eeaDoerApp')
-  .controller('GlosCtrl', function () {
-
+  .controller('GlosCtrl', function ($scope) {
+          console.log('something fired');
+          $scope.something = [];
   });
