@@ -85,7 +85,7 @@ form{
 }
 .table-container{
     max-height: 750px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 caption{
     color: #000;
